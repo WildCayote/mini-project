@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sentiment Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Review Sentiment</h1>
+
+      <form method="post">
+        <textarea
+          name="review"
+          rows="5"
+          required
+          placeholder="Type your movie review here..."
+        >
+{{ input_review if input_review else '' }}</textarea
+        >
+        <button type="submit">Predict Sentiment</button>
+      </form>
+
+      {% if prediction %}
+      <div
+        class="prediction-box {{ 'positive' if prediction == 'Positive' else 'negative' }}"
+      >
+        <p>Prediction: {{ prediction }}</p>
+        <p>Confidence: {{ confidence }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

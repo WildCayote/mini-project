@@ -11,3 +11,5 @@ uvicorn
 pydantic
 wordcloud
 nltk
+jinja2
+python-multipart
