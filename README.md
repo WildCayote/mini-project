@@ -19,38 +19,6 @@ This project processes IMDb-style review data, cleans and vectorizes the text, t
 | FastAPI      | For exposing predictions via an API     |
 | Joblib       | For model serialization                 |
 
-## Project Structure
-
-mini-project/
-│ images/ # Screenshots of the app
-│ ├── home.png # Screenshot of the home page
-│ ├── good_review.png # Screenshot of a good review prediction
-│ └── bad_review.png # Screenshot of a bad review prediction
-├── app/ # FastAPI app folder
-│ ├── main.py # FastAPI application
-│ ├── static/styles.css # Custom CSS for the UI
-│ └── templates/index.html # Frontend UI
-│
-├── data/
-│ ├── IMDB Dataset.csv.dvc # DVC-managed data
-│
-├── models/ # Saved TF-IDF and model
-│ ├── logistic_model.pkl
-│ └── tfidf_vectorizer.pkl
-├── scripts/
-│ ├── predict.py # Command-line prediction script
-│ ├── feature_engineering.py # Cleaning + vectorizing utilities
-├── notebooks/
-│ ├── eda.ipynb # Exploratory Data Analysis
-│ └── feature_engineering.ipynb # Feature engineering notebook
-│ └── training.ipynb # Model training notebook
-├── tests/
-│ ├── **init**.py
-│ ├── dummy_test.py # Model training pipeline
-│
-├──requirements.txt # Dependencies
-└── README.md
-
 ## Installation
 
 Clone the repository and install dependencies:
