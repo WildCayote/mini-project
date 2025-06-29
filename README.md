@@ -26,7 +26,6 @@ mini-project/
 │ ├── home.png # Screenshot of the home page
 │ ├── good_review.png # Screenshot of a good review prediction
 │ └── bad_review.png # Screenshot of a bad review prediction
-|
 ├── app/ # FastAPI app folder
 │ ├── main.py # FastAPI application
 │ ├── static/styles.css # Custom CSS for the UI
@@ -38,11 +37,9 @@ mini-project/
 ├── models/ # Saved TF-IDF and model
 │ ├── logistic_model.pkl
 │ └── tfidf_vectorizer.pkl
-│
 ├── scripts/
 │ ├── predict.py # Command-line prediction script
 │ ├── feature_engineering.py # Cleaning + vectorizing utilities
-|
 ├── notebooks/
 │ ├── eda.ipynb # Exploratory Data Analysis
 │ └── feature_engineering.ipynb # Feature engineering notebook
@@ -51,8 +48,8 @@ mini-project/
 │ ├── **init**.py
 │ ├── dummy_test.py # Model training pipeline
 │
+├──requirements.txt # Dependencies
 └── README.md
-└── requirements.txt # Dependencies
 
 ## Installation
 
