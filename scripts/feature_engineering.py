@@ -1,9 +1,10 @@
+import joblib
 import pandas as pd
 import string
 import re
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
-import nltk, pickle
+import nltk
 
 # Download stopwords if not already
 nltk.download('stopwords')
@@ -32,7 +33,7 @@ def vectorize_reviews(reviews: pd.Series, path_tfidf: str) -> pd.DataFrame:
     """
     Vectorize the cleaned reviews using TF-IDF.
     """
-    tfidf = pickle.load(open(path_tfidf, 'rb'))
+    tfidf = joblib.load(open(path_tfidf, 'rb'))
     X = tfidf.transform(reviews)
     return X
 
